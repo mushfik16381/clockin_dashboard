@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
   }, [])
   return (
     <div className='min-h-screen flex'>
-    <MainSidebar  />
+    <MainSidebar />
       <div className={`${open ? 'max-lg:blur-xl pointer-events-none' : ''} w-full`}>
         <MainHeader />
           <main className='mx-12 my-12'>{children}</main>

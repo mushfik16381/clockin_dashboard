@@ -16,7 +16,7 @@ const UserAreaSelectBox = () => {
       <>
          <div className="flex flex-col justify-center items-center relative z-10">
             <div onClick={() => setOpen((prev) => !prev)} className="p-4 cursor-pointer">
-               <FaUserCircle className="h-8 w-8 text-white"/>
+               <FaUserCircle className="h-8 w-8 text-[#11212E]"/>
                {/* <span className="border-2 border-blue-600 p-1 rounded-lg">User Area</span> */}
             </div>
             <div
