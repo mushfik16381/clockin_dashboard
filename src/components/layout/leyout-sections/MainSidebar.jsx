@@ -5,7 +5,7 @@ import { MenuContext } from '@/context/MenuContext';
 import logo from '../../../assets/logo.jpeg'
 import { AiFillHome, AiOutlineClose, AiFillSchedule } from 'react-icons/ai';
 import { FaUser, FaUsers } from 'react-icons/fa';
-import { FaBuildingUser} from 'react-icons/fa6';
+import { FaBuildingUser } from 'react-icons/fa6';
 import { BiSolidPhoneCall, BiChevronDown } from "react-icons/bi";
 import { MdMiscellaneousServices, MdReport } from "react-icons/md";
 import Image from 'next/image';
@@ -13,108 +13,113 @@ import Image from 'next/image';
 const MainSidebar = () => {
   const { open, toggle } = useContext(MenuContext);
 
-  const closeSideBarHandler = () => {
-    toggle();
-  };
-  const [company, setCompany] = useState(true);
-  const [team, setTeam] = useState(true);
-  // const [service, setService] = useState(true);
-
-  const toggleCompany = () => {
-    setCompany(!company);
-  };
-  const toggleTeam = () => {
-    setTeam(!team);
-  };
   return (
     <aside
-      className={`bg-[#11212E]  left-4 lg:sticky lg:block lg:left-0 overflow-hidden transition-all duration-200 ${open ? 'w-full p-8 block fixed' : 'w-0 hidden'
-        } lg:w-80 lg:p-4 max-lg:z-20 shadow-xl`}
+      className={` left-4 h-fit bg-secondary lg:sticky lg:block lg:left-0 overflow-hidden transition-all duration-200 `}
     >
+      {/* ${open ? 'w-full p-8 block fixed' : 'w-0 hidden'
+        } lg:w-70 lg:p-6 max-lg:z-20 shadow-xl */}
       <div>
-        <Image src={logo} className="w-[140px]">
+        <Image src={logo} className="w-[140px] pt-6">
 
         </Image>
       </div>
-      <ul>
+      <ul className='hs-accordion-group'>
         <li className='flex justify-end items-center lg:hidden'>
           <AiOutlineClose
-            onClick={closeSideBarHandler}
+
             className='text-red-500 hover:text-red-800 cursor-pointer'
           />
         </li>
 
         <li className='flex justify-start items-center text-lg my-4 mt-12 text-white   rounded-xl p-2'>
           <AiFillHome className='mr-2' />
-          <Link href='/' onClick={closeSideBarHandler}>
+          <Link href='/' >
             Home
           </Link>
         </li>
-        <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
-          <ul className="">
-            <li>
-              <button className={`block  hasSubMenu ${company ? '' : 'active'}`} onClick={toggleCompany}>
-              <span className='flex justify-start items-center'><FaBuildingUser className='mr-2 ' />Company <BiChevronDown className='ml-4 mt-1' /></span>{' '}
-              </button>
-              <ul className={` text-sm subMenu ${company ? 'hidden' : ''}`}>
+        <li class="hs-accordion " id="account-accordion">
+          <Link class="hs-accordion-toggle flex items-center gap-x-2 py-2 px-2 hs-accordion-active:text-white hs-accordion-active:hover:bg-transparent text-lg text-white rounded-md  hover:text-white" href="javascript:;">
+            <FaBuildingUser />
+            Company
+
+            <svg class="hs-accordion-active:block mx-auto hidden w-3 h-3 text-white " width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+
+            <svg class="hs-accordion-active:hidden mx-auto block w-3 h-3 text-white " width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </Link>
+
+          <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
+            <ul class="pt-2 pl-2">
               <li>
-                  <Link href="/company/addCompany" className="block text-lg pl-8 font-base pt-4 pb-2 ml-3">
-                    Add Company
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/company/allCompany" className="block text-lg pl-8 font-base  w-full  py-2 ml-3">
-                    All Company
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
+                <Link href="/company/addCompany" className="block text-lg pl-8 font-base pt-4 pb-2 ml-3 text-white">
+                  Add Company
+                </Link>
+              </li>
+              <li>
+                <Link href="/company/allCompany" className="block text-lg pl-8 font-base  py-2 ml-3 text-white">
+                  All Company
+                </Link>
+              </li>
+
+            </ul>
+          </div>
         </li>
-        <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
-            
-          <ul className="">
-            <li>
-              <button className={`block hasSubMenu ${team ? '' : 'active'}`} onClick={toggleTeam}>
-               <span className='flex justify-start items-center'><FaUsers className='mr-2 ' /> Team Member <BiChevronDown className='ml-4 mt-1' /></span>{' '}
-              </button>
-              <ul className={` text-sm subMenu ${team ? 'hidden' : ''}`}>
-                <li>
-                  <Link href="/company/addCompany" className="block text-lg pl-8 font-base pt-4 pb-2 ml-3">
-                    Add Team Member
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/company/allCompany" className="block text-lg pl-8 font-base  w-full  py-2 ml-3">
-                    All Team Member
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
+        <li class="hs-accordion" id="account-accordion">
+          <Link class="hs-accordion-toggle flex items-center gap-x-2 pt-5 px-2 hs-accordion-active:text-white hs-accordion-active:hover:bg-transparent text-lg text-white rounded-md  hover:text-white" href="javascript:;">
+            <FaUsers />
+            Team Member
+
+            <svg class="hs-accordion-active:block mx-auto hidden w-3 h-3 text-white " width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+
+            <svg class="hs-accordion-active:hidden mx-auto block w-3 h-3 text-white " width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </Link>
+
+          <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
+            <ul class="pt-2 pl-2">
+              <li>
+                <Link href="/team/addTeam" className="block text-lg pl-8 font-base pt-4 pb-2 ml-3 text-white">
+                  Add Team Member
+                </Link>
+              </li>
+              <li>
+                <Link href="/team/allTeam" className="block text-lg pl-8 font-base  py-2 ml-3 text-white">
+                  All Team Member
+                </Link>
+              </li>
+
+            </ul>
+          </div>
         </li>
-        <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
+        <li className='flex justify-start items-center text-lg mt-5 mb-4 text-white   rounded-xl p-2'>
           <FaUser className='mr-2  ' />
-          <Link href='/services' onClick={closeSideBarHandler}>
+          <Link href='/services' >
             Service User
           </Link>
         </li>
         <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
           <AiFillSchedule className='mr-2' />
-          <Link href='/schedule' onClick={closeSideBarHandler}>
+          <Link href='/schedule' >
             Schedule
           </Link>
         </li>
         <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
           <MdReport className='mr-2 ' />
-          <Link href='/tasklist' onClick={closeSideBarHandler}>
+          <Link href='/report' >
             Report
           </Link>
         </li>
         <li className='flex justify-start items-center text-lg my-4 text-white   rounded-xl p-2'>
           <BiSolidPhoneCall className='mr-2' />
-          <Link href='/comment' onClick={closeSideBarHandler}>
-          Call Summery
+          <Link href='/callSummery' >
+            Call Summery
           </Link>
         </li>
       </ul>

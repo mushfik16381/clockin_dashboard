@@ -4,7 +4,7 @@ import React from 'react';
 const page = () => {
     return (
         <div>
-            <BreadCumb title="Create Company" />
+            <BreadCumb title="Create Team" />
             <div className='container mx-auto py-6'>
                 <form className='container mx-auto py-4'>
                     <div className="space-y-12 mt-8">

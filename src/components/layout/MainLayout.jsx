@@ -13,12 +13,17 @@ const MainLayout = ({ children }) => {
     import('preline')
   }, [])
   return (
-    <div className='min-h-screen flex'>
-    <MainSidebar />
-      <div className={`${open ? 'max-lg:blur-xl pointer-events-none' : ''} w-full`}>
+    <div className='min-h-screen flex justify-between'>
+
+      <div className='w-3/12 h-screen fixed bg-secondary px-4 '><MainSidebar /></div>
+      <div className='w-9/12 ml-auto'>
+        <MainHeader />
+        <main className='mx-12 mb-12 mt-36 '>{children}</main>
+      </div>
+      {/* <div className={`${open ? 'max-lg:blur-xl pointer-events-none' : ''} w-full`}>
         <MainHeader />
           <main className='mx-12 my-12'>{children}</main>
-      </div>
+      </div> */}
       {/* <MobileButtonNavigation /> */}
     </div>
   );
