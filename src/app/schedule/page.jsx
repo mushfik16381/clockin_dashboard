@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const AboutUsPage = () => {
-   return <div className="bg-white  p-8">Schedule </div>;
+const page = () => {
+   return (
+      <div>
+         
+      </div>
+   );
 };
 
-export default AboutUsPage;
+export default page;

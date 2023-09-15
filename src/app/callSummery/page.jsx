@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const ContactUsPage = () => {
-   return <div className="bg-white p-8">Call Summery</div>;
+const page = () => {
+   return (
+      <div>
+         
+      </div>
+   );
 };
 
-export default ContactUsPage;
+export default page;

@@ -4,7 +4,7 @@ import React from 'react';
 const page = () => {
     return (
         <div>
-            <BreadCumb title="Create Team" />
+            <BreadCumb title="Create Service" />
             <div className='container mx-auto py-6'>
                 <form className='container mx-auto py-4'>
                     <div className="space-y-12 mt-8">
@@ -12,11 +12,11 @@ const page = () => {
                             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                 <div className="col-span-3">
                                     <label htmlFor="street-address" className="block text-md font-medium leading-6 text-gray-900">
-                                        Company Name
+                                       Service Date
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            type="text"
+                                            type="date"
                                             name="name"
                                             id="name"
                                             placeholder='name'
@@ -25,17 +25,17 @@ const page = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-span-3">
-                                    <label htmlFor="street-address" className="block text-md font-medium leading-6 text-gray-900">
-                                       Company Email
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="city" className="block text-md font-medium leading-6 text-gray-900">
+                                    Status
                                     </label>
                                     <div className="mt-2">
                                         <input
                                             type="text"
-                                            name="email"
-                                            id="email"
-                                            placeholder='email'
-                                            className="block w-full pl-4 rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
+                                            name="status"
+                                            id="status"
+                                            placeholder='status'
+                                            className="block pl-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
                                     </div>
@@ -49,14 +49,14 @@ const page = () => {
                             <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                 <div className="col-span-3">
                                     <label htmlFor="street-address" className="block text-md font-medium leading-6 text-gray-900">
-                                        Address
+                                    Service Time Start
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            type="text"
-                                            name="address"
-                                            id="address"
-                                            placeholder='address'
+                                            type="time"
+                                            name="company"
+                                            id="company"
+                                            placeholder='company'
                                             className="block pl-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
@@ -64,14 +64,14 @@ const page = () => {
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="city" className="block text-md font-medium leading-6 text-gray-900">
-                                        Phone
+                                    Service Time End
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            type="text"
-                                            name="phone"
-                                            id="phone"
-                                            placeholder='phone'
+                                            type="time"
+                                            name="address"
+                                            id="address"
+                                            placeholder='time'
                                             className="block pl-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
@@ -79,11 +79,11 @@ const page = () => {
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="region" className="block text-md font-medium leading-6 text-gray-900">
-                                        Contact Person Name
+                                     Worker Login
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            type="text"
+                                            type="time"
                                             name="contact-name"
                                             id="contact-name"
                                             placeholder='name'
@@ -94,11 +94,11 @@ const page = () => {
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="region" className="block text-md font-medium leading-6 text-gray-900">
-                                        Contact Person Number
+                                    Worker Logout
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            type="text"
+                                            type="time"
                                             name="contact-phone"
                                             id="contact-phone"
                                             placeholder='phone'

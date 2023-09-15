@@ -17,8 +17,8 @@ const MainLayout = ({ children }) => {
 
       <div className='w-3/12 h-screen fixed bg-secondary px-4 '><MainSidebar /></div>
       <div className='w-9/12 ml-auto'>
-        <MainHeader />
-        <main className='mx-12 mb-12 mt-36 '>{children}</main>
+        <div className='w-full'><MainHeader /></div>
+        <main className='mx-8 mb-12 mt-28'>{children}</main>
       </div>
       {/* <div className={`${open ? 'max-lg:blur-xl pointer-events-none' : ''} w-full`}>
         <MainHeader />

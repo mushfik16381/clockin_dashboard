@@ -8,12 +8,12 @@ import React from 'react';
 import axios from 'axios';
 
 const Page = () => {
-  const [company, setCompany] = useState();
+  const [customer, setCustomer] = useState();
   const fetchData = () => {
-      axios.get(`https://clockinserver.vercel.app/company/fake/data`)
+      axios.get(`https://clockinserver.vercel.app/customer/fake/data`)
           .then(function (response) {
               // handle success
-              setCompany(response.data.data)
+              setCustomer(response.data.data)
           })
   }
   useEffect(() => {
@@ -21,7 +21,7 @@ const Page = () => {
   }, [])
   return (
     <div>
-      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-4 mx-auto">
+      <div class="max-w-[85rem]  py-10 lg:py-4 mx-auto">
         <div class="flex flex-col">
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
@@ -29,10 +29,10 @@ const Page = () => {
                 <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
                   <div>
                     <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-                      All Company
+                      All Customer
                     </h2>
                     <p class="text-sm text-gray-600 dark:text-gray-400">
-                      Add company, edit and more.
+                      Add customer, edit and more.
                     </p>
                   </div>
 
@@ -42,11 +42,11 @@ const Page = () => {
                         View all
                       </a>
 
-                      <a class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" href="/company/addCompany">
+                      <a class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" href="/customer/addCustomer">
                         <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        Add Company
+                        Add Customer
                       </a>
                     </div>
                   </div>
@@ -58,15 +58,7 @@ const Page = () => {
                       <th scope="col" class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3 text-left">
                         <div class="flex items-center gap-x-2 pl-6">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                           Company Name
-                          </span>
-                        </div>
-                      </th>
-
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                          Company Email
+                           Customer Name
                           </span>
                         </div>
                       </th>
@@ -82,22 +74,17 @@ const Page = () => {
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                            Phone
+                          Latitude
                           </span>
                         </div>
                       </th>
 
+                      
+
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                            Contact Name
-                          </span>
-                        </div>
-                      </th>
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                            Contact Number
+                          Company
                           </span>
                         </div>
                       </th>
@@ -114,36 +101,25 @@ const Page = () => {
                   </thead>
 
                   <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-                  {company?.length > 0 && company?.map((item, index) => <tr key={index}>
+                  {customer?.length > 0 && customer?.map((item, index) => <tr key={index}>
                       <td class="h-px pl-6 w-px whitespace-nowrap">
                         <div class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3">
-                        <span class="block text-md text-secondary">{item.contactName
-}</span>
+                        <span class="block text-md text-secondary">{item.name}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.email}</span>
+                        <span class="block text-md text-secondary">{item.location}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.address}</span>
+                        <span class="block text-md text-secondary">{item.latitude}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.phone}</span>
-                        </div>
-                      </td>
-                      <td class="h-px w-72 whitespace-nowrap">
-                        <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.contactName}</span>
-                        </div>
-                      </td>
-                      <td class="h-px w-72 whitespace-nowrap">
-                        <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.contactPhone}</span>
+                        <span class="block text-md text-secondary">{item.company}</span>
                         </div>
                       </td>
                       
@@ -181,7 +157,7 @@ const Page = () => {
                 <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700">
                   <div>
                     <p class="text-sm text-gray-600 dark:text-gray-400">
-                      <span class="font-semibold text-gray-800 dark:text-gray-200">{company?.length}</span> results
+                      <span class="font-semibold text-gray-800 dark:text-gray-200">{customer?.length}</span> results
                     </p>
                   </div>
 
