@@ -78,12 +78,12 @@ const Page = () => {
                       </td>
 
 
-                      <td class="h-px w-px whitespace-nowrap">
-                        <div className="flex justify-around ">
+                      <td class="h-px w-12 whitespace-nowrap">
+                        <div className="flex justify-evenly ">
 
                           <div class="hs-tooltip inline-block">
                             <Link href='/tasklist/editTasklist'>
-                            <button type="button" class="hs-tooltip-toggle ">
+                            <button type="button" class="hs-tooltip-toggle text-2xl">
                               <BiEditAlt fill="#979797" />
                               <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
                                 Edit
@@ -92,7 +92,7 @@ const Page = () => {
                             </Link>
                           </div>
                           <div class="hs-tooltip inline-block pr-2">
-                            <button type="button" class="hs-tooltip-toggle ">
+                            <button type="button" class="hs-tooltip-toggle text-xl">
                               <BsTrash3 fill="red" />
                               <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-red-800 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
                                 Delete

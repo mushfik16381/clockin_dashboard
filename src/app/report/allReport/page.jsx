@@ -80,21 +80,14 @@ const Page = () => {
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
+                          Customer
+                          </span>
+                        </div>
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Status
-                          </span>
-                        </div>
-                      </th>
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Worker Time Start
-                          </span>
-                        </div>
-                      </th>
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Worker Time End
                           </span>
                         </div>
                       </th>
@@ -129,17 +122,12 @@ const Page = () => {
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
+                        <span class="block text-md text-secondary">{item.customer}</span>
+                        </div>
+                      </td>
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div class="px-6 py-3">
                         <span class="block text-md text-secondary">{item.status}</span>
-                        </div>
-                      </td>
-                      <td class="h-px w-72 whitespace-nowrap">
-                        <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.workerLogin.slice(11,16)}</span>
-                        </div>
-                      </td>
-                      <td class="h-px w-72 whitespace-nowrap">
-                        <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.workerLogout.slice(11,16)}</span>
                         </div>
                       </td>
                       

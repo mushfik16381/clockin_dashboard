@@ -3,9 +3,9 @@ import './globals.css';
 import MenuContextProvider from '@/context/MenuContext';
 
 export const metadata = {
-  title: 'Clock In',
+  title: 'Care Timer',
   description:
-    'This is a tutorial project from DevEmpower YouTube channel: https://www.youtube.com/@DevEmpower',
+    '',
 };
 
 export default function RootLayout({ children }) {
