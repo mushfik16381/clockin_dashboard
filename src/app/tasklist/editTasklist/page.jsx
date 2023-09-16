@@ -5,7 +5,7 @@ const page = () => {
     return (
         <div>
             <div className='bg-white border border-gray-200 rounded-xl shadow-sm p-6 mx-4'>
-            <BreadCumb title="Create TaskList" />
+            <BreadCumb title="Edit TaskList" />
                 <form className='container mx-auto py-4'>
                     <div className="space-y-12 mt-8">
                         <div className=" pb-4">
@@ -30,7 +30,7 @@ const page = () => {
                     </div>
                     <div className="mt-6 flex items-center justify-start gap-x-12 ">
                         <button type="button" class="py-3 px-8 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-[#fff] hover:bg-[#f98808c0] focus:outline-none focus:ring-2 focus:ring-[#F98708] focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-                            Create Task
+                            Edit Task
                         </button>
                     </div>
                 </form>

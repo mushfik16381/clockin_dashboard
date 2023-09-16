@@ -9,7 +9,7 @@ import  Customer  from "../app/customer/allCustomer/page";
 const HomePage = () => {
   return (
     <div className=' mt-12 '>
-       <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+       <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
         <div class="flex items-center p-8 bg-white shadow rounded-lg">
           <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
             <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
@@ -17,11 +17,11 @@ const HomePage = () => {
             </svg>
           </div>
           <div>
-            <span class="block text-2xl font-bold">62</span>
-            <span class="block text-gray-500">Members</span>
+            <span class="block text-2xl font-bold">32</span>
+            <span class="block text-gray-500">Company</span>
           </div>
         </div>
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
+        {/* <div class="flex items-center p-8 bg-white shadow rounded-lg">
           <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-100 rounded-full mr-6">
             <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -54,11 +54,9 @@ const HomePage = () => {
             <span class="block text-2xl font-bold">83%</span>
             <span class="block text-gray-500">Finished</span>
           </div>
-        </div>
+        </div> */}
       </section>
-      <div className="mt-6">
-      <Customer/>
-      </div>
+      
     </div>
   );
 };
