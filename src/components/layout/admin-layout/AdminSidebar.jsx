@@ -54,14 +54,14 @@ const MainSidebar = () => {
           <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
             <ul class="pt-2 pl-2">
               <li>
-                <Link href="/company/addCompany" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
+                <Link href="/admin/company/addCompany" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlinePlus/><span className='pl-2'>Add Company</span>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/company/allCompany" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
+                <Link href="/admin/company/allCompany" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlineTable/><span className='pl-2'>All Company</span>
                   </span>

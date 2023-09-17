@@ -1,4 +1,4 @@
-"use client"
+
 import './globals.css';
 // import MenuContextProvider from '@/context/MenuContext';
 import React from 'react';
@@ -6,8 +6,7 @@ import React from 'react';
 
 export const metadata = {
   title: 'Care Timer',
-  description:
-    '',
+  description: 'care time',
 };
 
 export default function RootLayout({ children }) {

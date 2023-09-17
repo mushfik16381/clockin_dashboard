@@ -54,14 +54,14 @@ const MainSidebar = () => {
           <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
             <ul class="pt-2 pl-2">
               <li>
-                <Link href="/worker/addWorker" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
+                <Link href="/company/worker/addWorker" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlinePlus/><span className='pl-2'>Add Worker</span>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/worker/allWorker" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
+                <Link href="/company/worker/allWorker" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlineTable/><span className='pl-2'>All Worker</span>
                   </span>
@@ -88,14 +88,14 @@ const MainSidebar = () => {
           <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
             <ul class="pt-2 pl-2">
               <li>
-                <Link href="/customer/addCustomer" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
+                <Link href="/company/customer/addCustomer" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlinePlus/><span className='pl-2'>Add Customer</span>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/customer/allCustomer" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
+                <Link href="/company/customer/allCustomer" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlineTable/><span className='pl-2'>All Customer</span>
                   </span>
@@ -122,14 +122,14 @@ const MainSidebar = () => {
           <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
             <ul class="pt-2 pl-2">
               <li>
-                <Link href="/tasklist/addTasklist" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white ">
+                <Link href="/company/tasklist/addTasklist" className="block text-lg pl-4 font-base pt-4 pb-2 ml-3 text-white ">
                   <span className='flex items-center '>
                     <AiOutlinePlus/><span className='pl-2'>Add Tasklist</span>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/tasklist/allTasklist" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
+                <Link href="/company/tasklist/allTasklist" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlineTable/><span className='pl-2'>All Tasklist</span>
                   </span>
@@ -141,20 +141,20 @@ const MainSidebar = () => {
         </li>
         <li className='flex justify-start items-center text-lg mt-6 text-white   rounded-xl px-2'>
           <MdReport className='mr-2 ' />
-          <Link href='/report/allReport' >
+          <Link href='/company/report/allReport' >
             Report
           </Link>
         </li>
         <li className='flex justify-start items-center text-lg mt-6 text-white   rounded-xl px-2'>
           <AiFillSchedule className='mr-2  ' />
-          <Link href='/schedule/addSchedule' >
+          <Link href='/company/schedule/addSchedule' >
           Schedule 
           </Link>
         </li>
 
         <li className='flex justify-start items-center text-lg mt-6 text-white   rounded-xl px-2'>
           <BiSolidPhoneCall className='mr-2' />
-          <Link href='/callSummery' >
+          <Link href='/company/callSummery' >
             Call Summery
           </Link>
         </li>

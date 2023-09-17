@@ -5,7 +5,7 @@ const page = () => {
    return (
        <div>
          <section >
-      <CompanyLayout/>
+            <h1>Company</h1>
             {/* <div class="flex items-center p-8 bg-white shadow rounded-lg">
                <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
                   <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
