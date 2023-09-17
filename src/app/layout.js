@@ -1,7 +1,8 @@
 
 import './globals.css';
-// import MenuContextProvider from '@/context/MenuContext';
+
 import React from 'react';
+// import Loading from '../components/loading/Loading';
 
 
 export const metadata = {
@@ -13,10 +14,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body>
+      {/* {!loading ? (
+        <React.Fragment>
+          <body>{children}</body>
+        </React.Fragment>
+      ) : (
+        <Loading/>
+      )} */}
         <React.Fragment>
           {/* <MenuContextProvider> */}
             <body>{children}</body>
-            {/* <MainLayout>{children}</MainLayout> */}
           {/* </MenuContextProvider> */}
         </React.Fragment>
       </body>

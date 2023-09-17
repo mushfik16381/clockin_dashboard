@@ -17,14 +17,14 @@ const UserAreaSelectBox = () => {
             <div onClick={() => setOpen((prev) => !prev)} className="p-4 cursor-pointer">
                {/* <FaUserCircle className="h-8 w-8 text-[#11212E]"/> */}
                {/* <img class="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Image Description"/> */}
-               <span className="border-2 border-primary p-2 rounded-lg">Admin</span>
+               <span className="border-2 border-primary p-2 rounded-lg">Company</span>
             </div>
             <div
                className={`flex flex-col bg-secondary text-white  w-[240px] my-2 rounded-lg ${
                   open ? "pt-4 pb-4 h-auto" : "overflow-hidden h-0"
                } transition-all duration-200 overflow-hidden absolute top-12 right-0`}
             ><h3 className="pl-4">Signed in as</h3>
-            <h3 className="py-2  pl-4">admin@admin.com</h3>
+            <h3 className="py-2  pl-4">company@company.com</h3>
                {actions.map((item) => (
                   <div
                      key={item.id}

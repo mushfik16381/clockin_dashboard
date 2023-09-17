@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useContext, useEffect } from 'react';
-import MainHeader from '../../components/layout/admin-layout/MainHeader';
+import MainHeader from '../../components/layout/company-layout/MainHeader';
 
 // import AdminSidebar from './admin-layout/AdminSidebar';
 import CompanySidebar from '../../components/layout/company-layout/CompanySidebar';

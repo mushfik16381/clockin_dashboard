@@ -33,7 +33,7 @@ const MainSidebar = () => {
 
         <li className='flex justify-start items-center text-lg  mt-12 text-white   rounded-xl p-2'>
           <AiFillHome className='mr-2' />
-          <Link href='/' >
+          <Link href='/admin' >
             Dashboard
           </Link>
         </li>

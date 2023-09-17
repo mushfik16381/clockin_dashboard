@@ -58,7 +58,7 @@ const Page = () => {
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
               <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden  ">
-                <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 ">
+                <div class="px-6 py-4 grid gap-3 border-b border-gray-200 ">
                   {/* <div>
                     <h2 class="text-2xl font-semibold text-gray-800 ">
                       All Report
@@ -69,29 +69,29 @@ const Page = () => {
                     <div class="flex justify-between items-center gap-x-2">
 
                       <div className='flex flex-col'>
-                        <label>Start Date</label>
-                        <input className='border rounded-md py-1 px-2' type='date'></input>
+                        <label className='pb-1 pl-1 text-sm font-base font-serif' >Start Date</label>
+                        <input className='border rounded-md py-1.5 px-3' type='date'></input>
                       </div>
                       <div className='flex flex-col'>
-                      <label>End Date</label>
-                        <input className='border rounded-md py-1 px-2' type='date'></input>
+                      <label className='pb-1 pl-1 text-sm font-base font-serif'>End Date</label>
+                        <input className='border rounded-md py-1.5 px-3' type='date'></input>
                       </div>
 
                       <div>
-                        <label>Filter By Worker</label>
-                        <Select className='w-48 py-1 mr-4 focus:ring-primary border-gray-300' options={worker} />
+                        <label className='pb-1 pl-1 text-sm font-base font-serif'>Filter By Worker</label>
+                        <Select className='w-48 py-1  focus:ring-primary border-gray-300' options={worker} />
                       </div>
 
                       <div>
-                        <label>Filter By Customer</label>
-                        <Select className='w-48 py-1 mr-4 focus:ring-primary border-gray-300' options={customer} />
+                        <label className='pb-1 pl-1 text-sm font-base font-serif'>Filter By Customer</label>
+                        <Select className='w-48 py-1  focus:ring-primary border-gray-300' options={customer} />
                       </div>
 
                       {/* <DateRangePicker /> */}
 
                       <div className='flex flex-col'>
-                        <label>Generate Report</label>
-                      <Link class="py-2 px-3 mr-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-secondary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="#">
+                        <label className='pb-1 pl-1 text-sm font-base font-serif'>Generate Report</label>
+                      <Link class="py-2 px-10 mr-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-secondary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="#">
                         Export
                       </Link>
                       </div>
@@ -133,7 +133,7 @@ const Page = () => {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" class="px-6 py-3 text-left">
+                      <th scope="col" class="px-8 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                             Status
@@ -147,8 +147,6 @@ const Page = () => {
                           </span>
                         </div>
                       </th>
-
-                      <th scope="col" class="px-6 py-3 text-right"></th>
                     </tr>
                   </thead>
 
