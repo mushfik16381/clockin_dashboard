@@ -1,5 +1,5 @@
 'use client';
-import BreadCumb from '@/components/breadCumb/BreadCumb';
+
 import { useEffect, useState } from 'react';
 import { AiOutlineEye } from "react-icons/ai";
 import { BiEditAlt } from "react-icons/bi";

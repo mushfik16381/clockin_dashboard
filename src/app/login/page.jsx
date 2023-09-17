@@ -12,7 +12,7 @@ const page = () => {
                         alt="Your Company"
                     /> */}
                     <h2 className="mt-6 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
-                        Login
+                        Care Timer
                     </h2>
                 </div>
 
@@ -39,11 +39,7 @@ const page = () => {
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                                     Password
                                 </label>
-                                <div className="text-sm">
-                                    <a href="#" className="font-semibold text-primary ">
-                                        Forgot password?
-                                    </a>
-                                </div>
+
                             </div>
                             <div className="mt-2">
                                 <input
@@ -58,21 +54,24 @@ const page = () => {
                         </div>
 
                         <div>
-                            <button
-                                type="submit"
-                                className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
-                            >
-                                Sign in
-                            </button>
+                            <Link href='/admin'>
+                                <button
+                                    type="submit"
+                                    className="flex w-full justify-center my-4 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                                >
+                                    Admin Login Demo
+                                </button>
+                            </Link>
+                            <Link href='/company'>
+                                <button
+
+                                    className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                                >
+                                    Company Login demo
+                                </button>
+                            </Link>
                         </div>
                     </form>
-
-                    <p className="mt-10 text-center text-sm text-gray-500">
-                        Not account?{' '}
-                        <Link href="/auth/register" className="font-semibold leading-6 text-secondary">
-                            Please Register
-                        </Link>
-                    </p>
                 </div>
             </div>
         </div>

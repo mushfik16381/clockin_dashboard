@@ -1,7 +1,21 @@
+'use client';
 import BreadCumb from '@/components/breadCumb/BreadCumb';
 import React from 'react';
+// import SelectSearch from 'react-select-search';
+// import 'react-select-search/style.css'
 
 const page = () => {
+    // const options = [
+    //     {name: 'Swedish', value: 'sv'},
+    //     {name: 'English', value: 'en'},
+    //     {
+    //         type: 'group',
+    //         name: 'Group name',
+    //         items: [
+    //             {name: 'Spanish', value: 'es'},
+    //         ]
+    //     },
+    // ];
     return (
         <div>
             <div className='bg-white border border-gray-200 rounded-xl shadow-sm p-6 mx-4 '>
@@ -67,6 +81,7 @@ const page = () => {
                                         Customer
                                     </label>
                                     <div className="mt-2">
+                                    {/* <SelectSearch options={options}  name="language" placeholder="Choose your language" /> */}
                                         <select class="block px-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6">
                                             <option selected>Customer</option>
                                             <option>Jhon Roy</option>

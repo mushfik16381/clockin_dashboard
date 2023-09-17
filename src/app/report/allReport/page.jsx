@@ -4,26 +4,50 @@ import { useEffect, useState } from 'react';
 import { AiOutlineEye } from "react-icons/ai";
 import { BiEditAlt } from "react-icons/bi";
 import { BsTrash3 } from "react-icons/bs";
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Select from 'react-select'
 
 const Page = () => {
   const [service, setService] = useState();
   const fetchData = () => {
-      axios.get(`https://clockinserver.vercel.app/service/fake/data`)
-          .then(function (response) {
-              // handle success
-              setService(response.data.data)
-          })
+    axios.get(`https://clockinserver.vercel.app/service/fake/data`)
+      .then(function (response) {
+        // handle success
+        setService(response.data.data)
+      })
   }
   useEffect(() => {
     fetchData()
   }, [])
+  const options = [
+    { value: 'worker', label: 'Worker' },
+    { value: 'customer', label: 'Customer' },
+  ]
+  // const groupBadgeStyles: CSSProperties = {
+  //   backgroundColor: '#EBECF0',
+  //   borderRadius: '2em',
+  //   color: '#172B4D',
+  //   display: 'inline-block',
+  //   fontSize: 12,
+  //   fontWeight: 'normal',
+  //   lineHeight: '1',
+  //   minWidth: 1,
+  //   padding: '0.16666666666667em 0.5em',
+  //   textAlign: 'center',
+  // };
+  
+  // const formatGroupLabel = (data: GroupedOption) => (
+  //   <div style={groupStyles}>
+  //     <span>{data.label}</span>
+  //     <span style={groupBadgeStyles}>{data.options.length}</span>
+  //   </div>
+  // );
   const handleDelete = async (_id) => {
     const proceed = window.confirm("Are you sure to delete this?");
-    
-};
+
+  };
   return (
     <div>
       <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-4 mx-auto">
@@ -39,9 +63,15 @@ const Page = () => {
                   </div>
 
                   <div>
-                    <div class="inline-flex gap-x-2">
-                      
+                    <div class="inline-flex items-center gap-x-2">
 
+                      <Select className='w-64 py-1 mr-4 focus:ring-primary border-gray-300' options={options} />
+
+                      <input type="date" name="" id="" className='border rounded-md px-4 py-1.5 mr-4' />
+
+                      <Link class="py-2 px-3 mr-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-secondary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="#">
+                        Export Report
+                      </Link>
                       <Link class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="/report/addReport">
                         <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -58,7 +88,7 @@ const Page = () => {
                       <th scope="col" class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3 text-left">
                         <div class="flex items-center gap-x-2 pl-6">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          ServiceDate
+                            ServiceDate
                           </span>
                         </div>
                       </th>
@@ -66,28 +96,28 @@ const Page = () => {
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Service Time Start
+                            Service Time Start
                           </span>
                         </div>
                       </th>
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Service Time End
+                            Service Time End
                           </span>
                         </div>
                       </th>
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Customer
+                            Customer
                           </span>
                         </div>
                       </th>
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                          Status
+                            Status
                           </span>
                         </div>
                       </th>
@@ -104,57 +134,57 @@ const Page = () => {
                   </thead>
 
                   <tbody class="divide-y divide-gray-200 ">
-                  {service?.length > 0 && service?.map((item, index) => <tr key={index}>
+                    {service?.length > 0 && service?.map((item, index) => <tr key={index}>
                       <td class="h-px pl-6 w-px whitespace-nowrap">
                         <div class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3">
-                        <span class="block text-md text-secondary">{item.serviceDate.slice(0,10)}</span>
+                          <span class="block text-md text-secondary">{item.serviceDate.slice(0, 10)}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.serviceTimeStart.slice(11,16)}</span>
+                          <span class="block text-md text-secondary">{item.serviceTimeStart.slice(11, 16)}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.serviceTimeEnd.slice(11,16)}</span>
+                          <span class="block text-md text-secondary">{item.serviceTimeEnd.slice(11, 16)}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.customer}</span>
+                          <span class="block text-md text-secondary">{item.customer}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                        <span class="block text-md text-secondary">{item.status}</span>
+                          <span class="block text-md text-secondary">{item.status}</span>
                         </div>
                       </td>
-                      
-                      <td class="h-px w-px whitespace-nowrap">
-                        <div className="flex justify-around ">
+
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div className="flex justify-evenly ">
                           <div class="hs-tooltip inline-block">
                             <Link href='/report/viewReport'>
-                            <button type="button" class="hs-tooltip-toggle ">
-                              <AiOutlineEye fill="#979797" />
-                              <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
-                                View
-                              </span>
-                            </button>
+                              <button type="button" class="hs-tooltip-toggle text-2xl">
+                                <AiOutlineEye fill="#979797" />
+                                <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
+                                  View
+                                </span>
+                              </button>
                             </Link>
                           </div>
                           <div class="hs-tooltip inline-block">
                             <Link href='/report/editReport'>
-                            <button type="button" class="hs-tooltip-toggle ">
-                              <BiEditAlt fill="#979797" />
-                              <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
-                                Edit
-                              </span>
-                            </button>
+                              <button type="button" class="hs-tooltip-toggle text-2xl">
+                                <BiEditAlt fill="#979797" />
+                                <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
+                                  Edit
+                                </span>
+                              </button>
                             </Link>
                           </div>
                           <div class="hs-tooltip inline-block pr-2">
-                            <button onClick={() => handleDelete(item._id)} type="button" class="hs-tooltip-toggle ">
+                            <button onClick={() => handleDelete(item._id)} type="button" class="hs-tooltip-toggle text-xl">
                               <BsTrash3 fill="red" />
                               <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-red-800 text-xs font-medium text-white rounded-md shadow-sm " role="tooltip">
                                 Delete

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useContext, useEffect } from 'react';
-import MainHeader from './admin-layout/MainHeader';
+import MainHeader from '../admin-layout/MainHeader';
 
 // import AdminSidebar from './admin-layout/AdminSidebar';
-import CompanySidebar from './company-layout/CompanySidebar';
+import CompanySidebar from './CompanySidebar';
 // import MobileButtonNavigation from './admin-layout/MobileButtonNavigation';
 
 const MainLayout = ({ children }) => {

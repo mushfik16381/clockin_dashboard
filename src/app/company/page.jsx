@@ -1,11 +1,11 @@
 'use client';
-import AdminLayout from "../../components/layout/admin-layout/page";
+import CompanyLayout from "../../components/layout/company-layout/page";
 import React from "react";
 const page = () => {
    return (
        <div>
          <section >
-      <AdminLayout/>
+      <CompanyLayout/>
             {/* <div class="flex items-center p-8 bg-white shadow rounded-lg">
                <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
                   <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">

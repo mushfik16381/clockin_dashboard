@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useContext, useEffect } from 'react';
-import MainHeader from './admin-layout/MainHeader';
+import MainHeader from '../admin-layout/MainHeader';
 
 // import AdminSidebar from './admin-layout/AdminSidebar';
-import CompanySidebar from './company-layout/CompanySidebar';
+import AdminSidebar from './AdminSidebar';
 // import MobileButtonNavigation from './admin-layout/MobileButtonNavigation';
 
 const MainLayout = ({ children }) => {
@@ -38,7 +38,7 @@ const MainLayout = ({ children }) => {
       } */}
 
 
-      <div className='w-2/12 h-screen fixed bg-secondary px-4 '><CompanySidebar /></div>
+      <div className='w-2/12 h-screen fixed bg-secondary px-4 '><AdminSidebar /></div>
       <div className='w-10/12 ml-auto'>
         <div className='w-full'><MainHeader /></div>
         <main className='mx-2 mb-12 mt-24'>{children}</main>
