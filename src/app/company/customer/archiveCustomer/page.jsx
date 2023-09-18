@@ -27,7 +27,7 @@ const Page = () => {
 };
   return (
     <div>
-      <div class="w-full lg:px-4 sm:px-3 py-10 lg:py-4 mx-auto">
+      <div class="w-full lg:px-4 py-10 lg:py-4 mx-auto">
         <div class="flex flex-col">
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
@@ -35,18 +35,13 @@ const Page = () => {
                 <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 ">
                   <div>
                     <h2 class="text-2xl font-semibold text-gray-800 ">
-                      All Service User
+                    Archive Service User
                     </h2>
                   </div>
+
                   <div>
                     <div class="inline-flex gap-x-2">
                       
-                      <Link class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="/company/customer/addCustomer">
-                        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                        Add Service User
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -108,7 +103,7 @@ const Page = () => {
                             </button>
                             </Link>
                           </div>
-                          <div class="hs-tooltip inline-block">
+                          {/* <div class="hs-tooltip inline-block">
                             <Link href='/company/customer/editCustomer'>
                             <button type="button" class="hs-tooltip-toggle text-2xl">
                               <BiEditAlt fill="#979797" />
@@ -125,7 +120,7 @@ const Page = () => {
                                 Delete
                               </span>
                             </button>
-                          </div>
+                          </div> */}
                         </div>
                       </td>
                     </tr>)}

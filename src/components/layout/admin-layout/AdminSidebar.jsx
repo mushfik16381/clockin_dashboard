@@ -6,7 +6,7 @@ import logo from '../../../assets/logo.jpeg'
 import { AiFillHome, AiOutlineClose, AiFillSchedule } from 'react-icons/ai';
 import { FaUser, FaUsers } from 'react-icons/fa';
 import { FaBuildingUser } from 'react-icons/fa6';
-import { BiSolidPhoneCall, BiChevronDown } from "react-icons/bi";
+import { BiSolidArchiveIn, BiChevronDown } from "react-icons/bi";
 import { AiOutlinePlus, AiOutlineTable } from "react-icons/ai";
 import { MdHelp, MdReport } from "react-icons/md";
 import { VscTasklist } from "react-icons/vsc";
@@ -64,6 +64,13 @@ const MainSidebar = () => {
                 <Link href="/admin/company/allCompany" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
                 <span className='flex items-center '>
                     <AiOutlineTable/><span className='pl-2'>All Company</span>
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin/company/archiveCompany" className="block text-lg pl-4 font-base  py-2 ml-3 text-white">
+                <span className='flex items-center '>
+                    <BiSolidArchiveIn/><span className='pl-2'>Archive Company</span>
                   </span>
                 </Link>
               </li>

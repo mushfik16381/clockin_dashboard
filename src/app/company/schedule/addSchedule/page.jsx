@@ -115,7 +115,7 @@ const page = () => {
                                         Task List
                                     </label>
                                     <div className="mt-2">
-                                    <Select className='w-full  focus:ring-primary border-gray-300' options={taskList} />
+                                    <Select className='w-full  focus:ring-primary border-gray-300' isMulti options={taskList} />
                                     </div>
                                 </div>
                             </div>
