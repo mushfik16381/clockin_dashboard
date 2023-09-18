@@ -10,7 +10,7 @@ import Link from "next/link";
 const MainHeader = () => {
    // const { toggle } = useContext(MenuContext);
    return (
-      <div className="bg-gray-100 shadow-lg  fixed right-0 top-0 w-10/12  px-4 flex justify-end items-center">
+      <div className="bg-gray-100 shadow-lg  fixed right-0 top-0 w-4/5  px-4 flex justify-end items-center">
          {/* <div>
             <Link >Login</Link>
          </div> */}

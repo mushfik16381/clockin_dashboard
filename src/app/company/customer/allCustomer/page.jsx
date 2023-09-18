@@ -27,7 +27,7 @@ const Page = () => {
 };
   return (
     <div>
-      <div class="max-w-[85rem] lg:px-4 py-10 lg:py-4 mx-auto">
+      <div class="w-full lg:px-4 py-10 lg:py-4 mx-auto">
         <div class="flex flex-col">
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
@@ -35,7 +35,7 @@ const Page = () => {
                 <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 ">
                   <div>
                     <h2 class="text-2xl font-semibold text-gray-800 ">
-                      All Customer
+                      All Service User
                     </h2>
                   </div>
 
@@ -46,7 +46,7 @@ const Page = () => {
                         <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        Add Customer
+                        Add Service User
                       </Link>
                     </div>
                   </div>
@@ -58,7 +58,7 @@ const Page = () => {
                       <th scope="col" class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3 text-left">
                         <div class="flex items-center gap-x-2 pl-6">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                            Customer Name
+                            Service User 
                           </span>
                         </div>
                       </th>

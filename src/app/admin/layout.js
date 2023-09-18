@@ -38,8 +38,8 @@ const MainLayout = ({ children }) => {
       } */}
 
 
-      <div className='w-2/12 h-screen fixed bg-secondary px-4 '><AdminSidebar /></div>
-      <div className='w-10/12 ml-auto'>
+      <div className='w-1/5 h-screen fixed bg-secondary px-4 '><AdminSidebar /></div>
+      <div className='w-4/5 ml-auto'>
         <div className='w-full'><MainHeader /></div>
         <main className='mx-2 mb-12 mt-24'>{children}</main>
       </div>

@@ -1,12 +1,18 @@
-
+'use client';
 import BreadCumb from '../../../../components/breadCumb/BreadCumb';
 import React from 'react';
+import Select from 'react-select'
 
 const page = () => {
+    const status = [
+        { value: 'Pending', label: 'Pending' },
+        { value: 'Done', label: 'Done' },
+        { value: 'Missed', label: 'Missed' }
+      ]
     return (
         <div>
             <div className='bg-white border border-gray-200 rounded-xl shadow-sm p-6 mx-4'>
-            <BreadCumb title="Edit Report" />
+            <BreadCumb title="Edit Call" />
                 <form className='container mx-auto py-4'>
                     <div className="space-y-12 mt-8">
                         <div className=" pb-4">
@@ -21,7 +27,7 @@ const page = () => {
                                             name="name"
                                             id="name"
                                             placeholder='name'
-                                            className="block w-full px-4 pl-4 rounded-md border-0 py-3 text-[gray-900 ] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
+                                            className="block w-full px-4 pl-4 rounded-md border-0 py-2 text-[gray-900 ] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
                                     </div>
@@ -31,14 +37,8 @@ const page = () => {
                                     Status
                                     </label>
                                     <div className="mt-2">
-                                        <input
-                                            type="text"
-                                            name="status"
-                                            id="status"
-                                            placeholder='status'
-                                            className="block pl-4 w-full px-4 rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
-
-                                        />
+                                    <Select className='w-full  focus:ring-primary border-gray-300' options={status} />
+                                    
                                     </div>
                                 </div>
 
@@ -58,7 +58,7 @@ const page = () => {
                                             name="company"
                                             id="company"
                                             placeholder='company'
-                                            className="block pl-4 px-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
+                                            className="block pl-4 px-4 w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
                                     </div>
@@ -73,37 +73,7 @@ const page = () => {
                                             name="address"
                                             id="address"
                                             placeholder='time'
-                                            className="block pl-4 px-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
-
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-3">
-                                    <label htmlFor="region" className="block text-md font-medium leading-6 text-gray-900">
-                                     Worker Login
-                                    </label>
-                                    <div className="mt-2">
-                                        <input
-                                            type="time"
-                                            name="contact-name"
-                                            id="contact-name"
-                                            placeholder='name'
-                                            className="block px-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
-
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-3">
-                                    <label htmlFor="region" className="block text-md font-medium leading-6 text-gray-900">
-                                    Worker Logout
-                                    </label>
-                                    <div className="mt-2">
-                                        <input
-                                            type="time"
-                                            name="contact-phone"
-                                            id="contact-phone"
-                                            placeholder='phone'
-                                            className="block px-4 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
+                                            className="block pl-4 px-4 w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-md sm:leading-6"
 
                                         />
                                     </div>

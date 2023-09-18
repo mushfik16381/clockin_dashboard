@@ -3,7 +3,7 @@ import React from 'react';
 const page = () => {
     return (
         <div>
-            <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-6 mx-auto">
+            <div class="w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-6 mx-auto">
                 <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-slate-900">
                     <div class="mb-8">
                         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">

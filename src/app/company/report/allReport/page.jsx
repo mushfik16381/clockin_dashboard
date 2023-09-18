@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { AiOutlineEye } from "react-icons/ai";
-import { BiEditAlt } from "react-icons/bi";
+import { BiEditAlt, BiSolidDownload } from "react-icons/bi";
 import { BsTrash3 } from "react-icons/bs";
 import React, { CSSProperties } from 'react';
 import axios from 'axios';
@@ -28,52 +28,39 @@ const Page = () => {
     { value: 'Rog', label: 'Rog' },
     { value: 'jhon', label: 'jhon' },
   ]
-  // const groupBadgeStyles: CSSProperties = {
-  //   backgroundColor: '#EBECF0',
-  //   borderRadius: '2em',
-  //   color: '#172B4D',
-  //   display: 'inline-block',
-  //   fontSize: 12,
-  //   fontWeight: 'normal',
-  //   lineHeight: '1',
-  //   minWidth: 1,
-  //   padding: '0.16666666666667em 0.5em',
-  //   textAlign: 'center',
-  // };
-
-  // const formatGroupLabel = (data: GroupedOption) => (
-  //   <div style={groupStyles}>
-  //     <span>{data.label}</span>
-  //     <span style={groupBadgeStyles}>{data.options.length}</span>
-  //   </div>
-  // );
+  const status = [
+    { value: 'Pending', label: 'Pending' },
+    { value: 'Done', label: 'Done' },
+    { value: 'Missed', label: 'Missed' }
+  ]
   const handleDelete = async (_id) => {
     const proceed = window.confirm("Are you sure to delete this?");
 
   };
   return (
     <div>
-      <div class="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-4 mx-auto">
+      <div class="w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-4 mx-auto">
         <div class="flex flex-col">
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
+            <div className='flex flex-col justify-end'>
+                        {/* <label className='pb-1 pl-1 text-sm font-base text-end font-serif'>Generate Report</label> */}
+                      <Link class="py-3 px-6  w-48 ml-auto mb-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="#">
+                        Export PDF <BiSolidDownload className='text-xl' />
+                      </Link>
+                      </div>
               <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden  ">
                 <div class="px-6 py-4 grid gap-3 border-b border-gray-200 ">
-                  {/* <div>
-                    <h2 class="text-2xl font-semibold text-gray-800 ">
-                      All Report
-                    </h2>
-                  </div> */}
-
+                
                   <div>
                     <div class="flex justify-between items-center gap-x-2">
 
                       <div className='flex flex-col'>
-                        <label className='pb-1 pl-1 text-sm font-base font-serif' >Start Date</label>
+                        <label className='pb-1 pl-1 text-sm font-base font-serif' >From : </label>
                         <input className='border rounded-md py-1.5 px-3' type='date'></input>
                       </div>
                       <div className='flex flex-col'>
-                      <label className='pb-1 pl-1 text-sm font-base font-serif'>End Date</label>
+                      <label className='pb-1 pl-1 text-sm font-base font-serif'>To : </label>
                         <input className='border rounded-md py-1.5 px-3' type='date'></input>
                       </div>
 
@@ -86,16 +73,12 @@ const Page = () => {
                         <label className='pb-1 pl-1 text-sm font-base font-serif'>Filter By Customer</label>
                         <Select className='w-48 py-1  focus:ring-primary border-gray-300' options={customer} />
                       </div>
-
-                      {/* <DateRangePicker /> */}
-
-                      <div className='flex flex-col'>
-                        <label className='pb-1 pl-1 text-sm font-base font-serif'>Generate Report</label>
-                      <Link class="py-2 px-10 mr-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-secondary text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm " href="#">
-                        Export
-                      </Link>
+                      <div>
+                        <label className='pb-1 pl-1 text-sm font-base font-serif'>Filter By Status</label>
+                        <Select className='w-48 py-1  focus:ring-primary border-gray-300' options={status} />
                       </div>
 
+                      {/* <DateRangePicker /> */}
 
                     </div>
                   </div>
@@ -129,7 +112,14 @@ const Page = () => {
                       <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex items-center gap-x-2">
                           <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
-                            Customer
+                            Duration
+                          </span>
+                        </div>
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
+                            Service User
                           </span>
                         </div>
                       </th>
@@ -154,7 +144,7 @@ const Page = () => {
                     {service?.length > 0 && service?.map((item, index) => <tr key={index}>
                       <td class="h-px pl-6 w-px whitespace-nowrap">
                         <div class="pl-6 lg:pl-3 xl:pl-0 pr-6 py-3">
-                          <span class="block text-md text-secondary">{item.serviceDate.slice(0, 10)}</span>
+                          <span class="block text-md text-secondary">{item.serviceDate.slice(0, 10).reverse()}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
@@ -169,7 +159,12 @@ const Page = () => {
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
                         <div class="px-6 py-3">
-                          <span class="block text-md text-secondary">{item.customer}</span>
+                          <span class="block text-md text-secondary">{item.customer.slice(0, 2)}</span>
+                        </div>
+                      </td>
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div class="px-6 py-3">
+                          <span class="block text-md text-secondary">{item.customer.slice(0, 16)}</span>
                         </div>
                       </td>
                       <td class="h-px w-72 whitespace-nowrap">
