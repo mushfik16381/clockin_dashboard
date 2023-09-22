@@ -12,15 +12,12 @@ const MenuContextProvider = ({ children }) => {
    };
 
 
-  const info = {
-   open, 
-   toggle
+//   const info = {
+//    open, 
+//    toggle
 
-}
-   return (
-      <MenuContext.Provider value={info}>
-         {children}
-      </MenuContext.Provider>);
+// }
+return <MenuContext.Provider value={{ open, toggle }}>{children}</MenuContext.Provider>;
 };
 
-export default {MenuContextProvider};
+export default MenuContextProvider;
